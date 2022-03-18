@@ -7,6 +7,13 @@ const vm = Vue.createApp({
             rotateZ: 0,
         }
     },
+    computed: {
+        square() {
+            return {
+                transform: `perspective(${this.perspective}px) rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg) rotateZ(${this.rotateZ}deg)`
+            }
+        }
+    },
     methods: {
         clearSliders: function() {
             rotateZ: this.rotateZ = 0;
