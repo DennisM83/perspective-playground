@@ -71,6 +71,10 @@ button {
   margin-right: 10px;
 }
 
+button:focus {
+  background-color: #000862;
+}
+
 label{
   color: #fff;
 }
