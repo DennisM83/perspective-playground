@@ -20,9 +20,14 @@ const vm = Vue.createApp({
             perspective: this.perspective = 999;
             rotateX: this.rotateX = 0;
             rotateY: this.rotateY = 0;
+            if(this.backgroundColor = '#8d80f3') {
+                this.backgroundColor = '#EE77D9'
+            }
         },
         copy: function() {
-            console.log(this.box.transform);
+            const transform = `transform: ${this.square.transform}`
+            console.log(transform);
+            navigator.clipboard.writeText(transform);
         }
     }
 }).mount('#app')
